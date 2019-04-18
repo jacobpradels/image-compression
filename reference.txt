@@ -1,0 +1,23 @@
+import tkinter
+mylist = [1,2,3,4,5]
+top = tkinter.Tk()
+top.title('The game')
+#You can set the geometry attribute to change the root windows size
+top.geometry("500x500") #You want the size of the app to be 500x500
+top.resizable(0, 0) #Don't allow resizing in the x or y direction
+w = tkinter.Label(top, text="Hello, world!")
+w.pack()
+
+g = tkinter.Label(top, text=mylist)
+g.pack()
+
+e = tkinter.Entry(top)
+e.pack()
+def outputit():
+    print(e.get())
+    
+
+b = tkinter.Button(top, text="OK", command=outputit)
+b.pack()
+
+top.mainloop()
